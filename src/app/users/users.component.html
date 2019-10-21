@@ -1,0 +1,12 @@
+<div>
+  <form [formGroup]='rForm' (ngSubmit)="addForm(rForm.value)">
+
+          Email:<br>
+            <input type="text" formControlName="email"><br>
+            <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Validate email
+            </div>
+          Password:<br>
+            <input type="password" formControlName="password"><br><br>
+            <input type="submit" class="button expanded" value="Sign in" [disabled]="!rForm.valid">
+  </form>
+</div>
