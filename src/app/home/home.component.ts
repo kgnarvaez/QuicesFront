@@ -1,23 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { AuthComponent } from '../auth/auth.component';
- 
+import 'bootstrap/dist/js/bootstrap.bundle';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-  isShowed: Boolean = false;
-  constructor(private auth: AuthComponent) { }
+export class HomeComponent  {
 
-  ngOnInit() {
-    console.log("arranque");
-    if (this.auth.isSubmitting)
-    { 
-      console.log(this.auth.isSubmitting);
-      this.isShowed = true;
-    }
-  }
+  constructor() { }
 
 }

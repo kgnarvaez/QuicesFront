@@ -1,0 +1,21 @@
+.nav-link{
+  background-color: purple;
+    min-width: 378px;
+    text-align: center;
+    color:white;
+    font-size:20px
+
+}
+.dropdown-menu{
+  background-color: purple;
+    min-width: 378px;
+    text-align: center;
+
+
+}
+
+li a:hover, .dropdown-item:hover .dropbtn {
+  background-color:darkviolet;
+}
+
+

@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+<app-header></app-header>
 <div class="auth-page">
         <div class="container page">
             <div class="row">
@@ -18,9 +19,9 @@
                     </font>
                     <form [formGroup]="authForm" (ngSubmit)="submitForm()">
                         <div class="form-group" >
-                        <input 
+                        <input
                             name="name"
-                            formControlName="email" 
+                            formControlName="email"
                             placeholder="Email"
                             class="form-control form-control-lg"
                             type="text"
@@ -28,13 +29,13 @@
                         <div class="alert" *ngIf="!authForm.controls['email'].valid && authForm.controls['email'].touched">Validate email</div>
                         </div>
                         <div class="form-group">
-                         <input 
+                         <input
                             formControlName="password"
                             placeholder="Password"
                             class="form-control form-control-lg"
                             type="password" />
                         </div>
-                        <button type="submit" class="btn btn-lg btn-primary pull-xs-right" style="background-color:purple" [disabled]="!authForm.valid" >Sign in</button>  
+                        <button type="submit" class="btn btn-lg btn-primary pull-xs-right" style="background-color:purple" [disabled]="!authForm.valid" >Sign in</button>
                     </form>
             </div>
         </div>
